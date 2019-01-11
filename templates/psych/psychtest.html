@@ -1,7 +1,25 @@
 {% extends 'base.html' %}
 
+{% load staticfiles %}
+
 {% block title %}Psychology Test{% endblock %}
 
 {% block content %}
     <h2>hhhhhHHHH</h2>
+    <div id="app">
+        <p>test</p>
+        <p>{{ message }}</p>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+
+    <script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: 'Hello Vue.js',
+        }
+    })
+    </script>
 {% endblock %}
